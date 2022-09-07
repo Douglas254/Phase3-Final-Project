@@ -1,9 +1,24 @@
 {
   "posts": [
     {
-      "title": "Learn Ruby Seamlesly",
-      "author": "Douglas Obara",
-      "id": 2
+      "title": "Newly married couple’s blogging from Paris",
+      "image": "https://demo.themebeez.com/cream-blog-free/wp-content/uploads/sites/23/2018/07/photographer-865295_1280.jpg",
+      "short_story": "Curabitur commodo, urna ut pellentesque venenatis, orci lacus vehicula quam, nec eleifend arcu tortor id ligula. Sed varius sit amet erat ut congue. Morbi augue purus, tincidunt euismod ultrices sit amet, dictum et tellus. Vivamus sit amet sapien eget lectus tempor egestas. Aliquam blandit ligula ut placerat condimentum. Aliquam eget auctor enim. Donec enim velit, porttitor ut fringilla vel, pretium pellentesque risus. Cras id sem sapien. Sed purus nibh, ultricies ut felis vel, porttitor scelerisque lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam in magna non libero ultrices interdum id eget lacus. Morbi ac eleifend mi, eget dignissim ligula"
+    },
+    {
+      "title": "Let’s welcome Christmas & new year together",
+      "image": "https://www.blog.codeafrika.co.ke/wp-content/uploads/2018/07/new-years-eve-1856831_1280.jpg",
+      "short_story": "Sed mollis magna vitae pharetra eleifend. Nullam vel orci nec turpis sodales mattis. Aenean non dolor quam. Nunc facilisis mauris sit amet ex iaculis, sed iaculis tellus mattis. Vivamus at purus ligula. Nam a mauris id justo molestie ornare. Aliquam dolor ex, euismod sed rhoncus sed, ornare ut turpis. Aliquam quis interdum est. Aenean vel ante dapibus, rhoncus nulla et, condimentum lorem. In hac habitasse platea dictumst. Aliquam erat volutpat. In at sapien vel augue dapibus consequat sit amet vitae enim. Proin lacinia congue ipsum et semper."
+    },
+    {
+      "title": "Newly married couple’s blogging from Paris",
+      "image": "https://demo.themebeez.com/cream-blog-free/wp-content/uploads/sites/23/2018/07/photographer-865295_1280.jpg",
+      "short_story": "Curabitur commodo, urna ut pellentesque venenatis, orci lacus vehicula quam, nec eleifend arcu tortor id ligula. Sed varius sit amet erat ut congue. Morbi augue purus, tincidunt euismod ultrices sit amet, dictum et tellus. Vivamus sit amet sapien eget lectus tempor egestas. Aliquam blandit ligula ut placerat condimentum. Aliquam eget auctor enim. Donec enim velit, porttitor ut fringilla vel, pretium pellentesque risus. Cras id sem sapien. Sed purus nibh, ultricies ut felis vel, porttitor scelerisque lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam in magna non libero ultrices interdum id eget lacus. Morbi ac eleifend mi, eget dignissim ligula"
+    },
+    {
+      "title": "Let’s welcome Christmas & new year together",
+      "image": "https://www.blog.codeafrika.co.ke/wp-content/uploads/2018/07/new-years-eve-1856831_1280.jpg",
+      "short_story": "Sed mollis magna vitae pharetra eleifend. Nullam vel orci nec turpis sodales mattis. Aenean non dolor quam. Nunc facilisis mauris sit amet ex iaculis, sed iaculis tellus mattis. Vivamus at purus ligula. Nam a mauris id justo molestie ornare. Aliquam dolor ex, euismod sed rhoncus sed, ornare ut turpis. Aliquam quis interdum est. Aenean vel ante dapibus, rhoncus nulla et, condimentum lorem. In hac habitasse platea dictumst. Aliquam erat volutpat. In at sapien vel augue dapibus consequat sit amet vitae enim. Proin lacinia congue ipsum et semper."
     }
   ],
   "comments": [],

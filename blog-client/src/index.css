@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.blog__title{
+  background-color: rgba(255, 0, 255, 0.144);
+  text-transform: uppercase;
+ text-shadow: #15ff00e8 1px 0 10px;
+}
+
+.post__image img{
+  width: 100%;
+  height: 300px;
+}
+
+.post__wrapper{
+  border-radius: 26px;
+  background: #e0e0e0;
+  border-radius: 10px 10px 26px 26px;
+  background: #86285f5e;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  margin: 20px 0px 0px 0px;
+}
+
+.story__desc{
+  padding: 15px 5px 20px 10px;
+  justify-content: center;
+}
