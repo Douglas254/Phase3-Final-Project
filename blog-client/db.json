@@ -1,0 +1,13 @@
+{
+  "posts": [
+    {
+      "title": "Learn Ruby Seamlesly",
+      "author": "Douglas Obara",
+      "id": 2
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
