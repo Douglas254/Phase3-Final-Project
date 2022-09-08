@@ -1,8 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700;900&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -55,4 +55,12 @@ code {
 .post__delete{
   cursor: pointer;
   color: 	rgba(255, 0, 0, 0.733);
+}
+
+::placeholder{
+  font-size: 13px;
+}
+
+.form__label{
+  font-weight: 500;
 }

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Header from "./Header";
+import Modal from "./Modal";
 import Post from "./Post";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
   return (
     <div className="container-fluid">
       <Header />
+      <Modal/>
       <Post posts={posts} />
     </div>
   );
