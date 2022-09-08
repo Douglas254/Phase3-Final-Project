@@ -2,21 +2,27 @@ import { useEffect, useState } from "react";
 import Header from "./Header";
 import Modal from "./Modal";
 import Post from "./Post";
+import axios from "axios";
+
+const api = "http://localhost:5000/posts";
 
 function App() {
-  const [posts, setPosts] = useState([]);
+  const [post, setPost] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/posts")
-    .then(r=>r.json())
-    .then(posts=>setPosts(posts));
+    loadPosts();
   }, []);
+
+  const loadPosts = async () => {
+    const response = await axios.get(api);
+    setPost(response.data)
+  };
 
   return (
     <div className="container-fluid">
       <Header />
-      <Modal/>
-      <Post posts={posts} />
+      <Modal loadPosts={loadPosts} />
+      <Post posts={post} />
     </div>
   );
 }

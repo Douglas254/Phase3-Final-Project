@@ -6,14 +6,14 @@ import "react-toastify/dist/ReactToastify.css";
 
 const api = "http://localhost:5000/posts";
 
-// default state 
+// default state
 const initialState = {
   title: "",
   image: "",
   short_story: "",
 };
 
-const ModalShow = () => {
+const ModalShow = ({ loadPosts }) => {
   const [show, setShow] = useState(false);
   const [state, setState] = useState(initialState);
 
@@ -37,10 +37,12 @@ const ModalShow = () => {
     } else {
       axios.post(api, state);
       toast.success("Post Added Succesfully");
-      // restore the form input to default with no data 
+      // restore the form input to default with no data
       setState({ title: "", image: "", short_story: "" });
       // close modal after sucessfull submission
       handleClose();
+      // rerender the loadPosts function 
+      loadPosts();
     }
   }
   return (
