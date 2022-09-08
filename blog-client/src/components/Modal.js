@@ -41,7 +41,7 @@ const ModalShow = ({ loadPosts }) => {
       setState({ title: "", image: "", short_story: "" });
       // close modal after sucessfull submission
       handleClose();
-      // rerender the loadPosts function 
+      // rerender the loadPosts function
       loadPosts();
     }
   }

@@ -1,8 +1,22 @@
 import React from "react";
 import { BsFillPencilFill } from "react-icons/bs";
 import { BsFillTrashFill } from "react-icons/bs";
+import axios from "axios";
+import { toast } from "react-toastify";
 
-const Post = ({ posts }) => {
+
+const api = "http://localhost:5000/posts";
+
+const Post = ({ posts, loadPosts }) => {
+  // handle the delete operation
+  const handleDelete = async (id) => {
+    if (window.confirm("Are you sure want to delete this post?")) {
+      axios.delete(`${api}/${id}`);
+      toast.success("deleted successfully");
+      // rerender the loadPosts function
+      loadPosts();
+    }
+  };
   return (
     <>
       <div className="row">
@@ -18,7 +32,7 @@ const Post = ({ posts }) => {
                 <div className="post__edit">
                   <BsFillPencilFill />
                 </div>
-                <div className="post__delete">
+                <div className="post__delete" onClick={() => handleDelete(id)}>
                   <BsFillTrashFill />
                 </div>
               </div>

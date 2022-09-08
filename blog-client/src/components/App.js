@@ -22,7 +22,7 @@ function App() {
     <div className="container-fluid">
       <Header />
       <Modal loadPosts={loadPosts} />
-      <Post posts={post} />
+      <Post posts={post} loadPosts={loadPosts}  />
     </div>
   );
 }
