@@ -8,15 +8,21 @@
     },
     {
       "id": 4,
-      "title": "Let’s welcome Christmas & new year together",
-      "image": "https://www.blog.codeafrika.co.ke/wp-content/uploads/2018/07/new-years-eve-1856831_1280.jpg",
-      "short_story": "Sed mollis magna vitae pharetra eleifend. Nullam vel orci nec turpis sodales mattis. Aenean non dolor quam. Nunc facilisis mauris sit amet ex iaculis, sed iaculis tellus mattis. Vivamus at purus ligula. Nam a mauris id justo molestie ornare. Aliquam dolor ex, euismod sed rhoncus sed, ornare ut turpis. Aliquam quis interdum est. Aenean vel ante dapibus, rhoncus nulla et, condimentum lorem. In hac habitasse platea dictumst. Aliquam erat volutpat. In at sapien vel augue dapibus consequat sit amet vitae enim. Proin lacinia congue ipsum et semper."
+      "title": "Test Again",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQspJMklMmja_GjDDrSOD7LIWu5TMP_C4Rs8w&usqp=CAU",
+      "short_story": "at purus ligula. Nam a mauris id justo molestie ornare. Aliquam dolor ex, euismod sed rhoncus sed, ornare ut turpis. Aliquam quis interdum est. Aenean vel ante dapibus, rhoncus nulla et, condimentum lorem. In hac habitasse platea dictumst. Aliquam erat volutpat. In at sapien vel augue dapibus consequat sit amet vitae enim. Proin lacinia congue ipsum et semper."
     },
     {
       "title": "Summer pose on the sunshine bright",
       "image": "https://demo.themebeez.com/cream-blog-free/wp-content/uploads/sites/23/2018/06/beautiful-3062365_1920.jpg",
       "short_story": "Morbi semper faucibus ante, non malesuada ligula rhoncus vel. Donec et vehicula urna. Mauris at ligula ullamcorper neque placerat efficitur. Fusce eu nisi quis dolor ullamcorper pulvinar. Sed luctus odio ligula, eu ornare urna rutrum sit amet. Donec ipsum neque, volutpat eget elementum ac, ullamcorper quis orci. Nunc elementum venenatis tincidunt. Suspendisse vel mollis turpis. Nullam sed orci efficitur, tincidunt sapien in, rutrum ante. Mauris vulputate tempus enim non porttitor. Pellentesque nisi urna, faucibus vel orci rutrum, convallis egestas ante. Ut accumsan sollicitudin risus sed vehicula. Fusce erat nibh, sodales ut leo ultrices, euismod efficitur velit. Aenean vulputate sapien eu eleifend imperdiet. In ut accumsan risus.",
       "id": 5
+    },
+    {
+      "title": "How you define a girl and watch",
+      "image": "https://demo.themebeez.com/cream-blog-free/wp-content/uploads/sites/23/2018/06/wedding-3145509_1920.jpg",
+      "short_story": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      "id": 6
     }
   ],
   "comments": [],

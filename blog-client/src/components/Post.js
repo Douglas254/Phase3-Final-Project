@@ -19,6 +19,8 @@ const initialState = {
 const Post = ({ posts, loadPosts }) => {
   const [show, setShow] = useState(false);
   const [state, setState] = useState(initialState);
+  const [userId, setUserId] = useState(null);
+  const [editMode, setEditMode] = useState(false);
 
   // object destructuring
   const { title, image, short_story } = state;
@@ -38,16 +40,37 @@ const Post = ({ posts, loadPosts }) => {
     if (!title || !image || !short_story) {
       toast.error("Please fill all input fields");
     } else {
-      axios.post(api, state);
-      toast.success("Post Added Succesfully");
-      // restore the form input to default with no data
-      setState({ title: "", image: "", short_story: "" });
-      // close modal after sucessfull submission
-      handleClose();
-      // rerender the loadPosts function
-      loadPosts();
+      if (!editMode) {
+        axios.post(api, state);
+        toast.success("Post Added Succesfully");
+        // restore the form input to default with no data
+        setState({ title: "", image: "", short_story: "" });
+        // close modal after sucessfull submission
+        handleClose();
+        // rerender the loadPosts function
+        loadPosts();
+      } else {
+        axios.put(`${api}/${userId}`, state);
+        toast.success("Updates Succesfully");
+        // restore the form input to default with no data
+        setState({ title: "", image: "", short_story: "" });
+        // close modal after sucessfull submission
+        handleClose();
+        // rerender the loadPosts function
+        loadPosts();
+        setUserId(null);
+        setEditMode(false);
+      }
     }
   }
+
+  const handleUpdate = (id) => {
+    const singleUser = posts.find((item) => item.id === id);
+    setState({ ...singleUser });
+    setUserId(id);
+    setEditMode(true);
+    handleShow();
+  };
 
   // handle the delete operation
   const handleDelete = async (id) => {
@@ -74,7 +97,7 @@ const Post = ({ posts, loadPosts }) => {
               </div>
               <p className="story__desc">{short_story}</p>
               <div className="action__icons">
-                <div className="post__edit">
+                <div className="post__edit" onClick={() => handleUpdate(id)}>
                   <BsFillPencilFill />
                 </div>
                 <div className="post__delete" onClick={() => handleDelete(id)}>
@@ -85,7 +108,7 @@ const Post = ({ posts, loadPosts }) => {
           </div>
         ))}
       </div>
-      
+
       {/* toast action message notification */}
       <ToastContainer />
 
@@ -136,7 +159,7 @@ const Post = ({ posts, loadPosts }) => {
                 Cancel
               </Button>
               <Button variant="primary" type="submit">
-                Post
+                {editMode ? "Update" : "Post"}
               </Button>
             </Modal.Footer>
           </Form>
