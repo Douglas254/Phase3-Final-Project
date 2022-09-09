@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Header from "./Header";
-import Modal from "./Modal";
 import Post from "./Post";
 import axios from "axios";
 
@@ -15,14 +14,13 @@ function App() {
 
   const loadPosts = async () => {
     const response = await axios.get(api);
-    setPost(response.data)
+    setPost(response.data);
   };
 
   return (
     <div className="container-fluid">
       <Header />
-      <Modal loadPosts={loadPosts} />
-      <Post posts={post} loadPosts={loadPosts}  />
+      <Post posts={post} loadPosts={loadPosts} />
     </div>
   );
 }
