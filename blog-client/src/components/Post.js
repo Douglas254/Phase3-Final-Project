@@ -50,7 +50,7 @@ const Post = ({ posts, loadPosts }) => {
         // rerender the loadPosts function
         loadPosts();
       } else {
-        axios.put(`${api}/${userId}`, state);
+        axios.patch(`${api}/${userId}`, state);
         toast.success("Updates Succesfully");
         // restore the form input to default with no data
         setState({ title: "", image: "", short_story: "" });
