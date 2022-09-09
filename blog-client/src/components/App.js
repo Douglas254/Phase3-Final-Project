@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Header from "./Header";
 import Post from "./Post";
 import axios from "axios";
+import Footer from "./Footer";
 
 const api = "http://localhost:5000/posts";
 
@@ -21,6 +22,7 @@ function App() {
     <div className="container-fluid">
       <Header />
       <Post posts={post} loadPosts={loadPosts} />
+      <Footer/>
     </div>
   );
 }
