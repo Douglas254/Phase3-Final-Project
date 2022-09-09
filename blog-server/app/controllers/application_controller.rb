@@ -15,4 +15,14 @@ class ApplicationController < Sinatra::Base
   end
 >>>>>>> 5601ebb (create a read operation API)
 
+  # Create operation 
+  post '/posts' do 
+    post = Post.create(
+      title: params[:title],
+      image: params[:image],
+      short_story: params[:short_story]
+    )
+    post.to_json
+  end
+
 end
