@@ -6,14 +6,11 @@ class ApplicationController < Sinatra::Base
     { message: "Good luck with your project!" }.to_json
   end
 
-<<<<<<< HEAD
-=======
   # Read Operation
   get '/posts' do
     posts = Post.all
     posts.to_json
   end
->>>>>>> 5601ebb (create a read operation API)
 
   # Create operation 
   post '/posts' do 
