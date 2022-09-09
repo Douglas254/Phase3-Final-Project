@@ -7,7 +7,7 @@ import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const api = "http://localhost:5000/posts";
+const api = "http://localhost:9292/posts";
 
 // default state
 const initialState = {

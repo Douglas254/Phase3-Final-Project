@@ -4,7 +4,7 @@ import Post from "./Post";
 import axios from "axios";
 import Footer from "./Footer";
 
-const api = "http://localhost:5000/posts";
+const api = "http://localhost:9292/posts";
 
 function App() {
   const [post, setPost] = useState([]);
