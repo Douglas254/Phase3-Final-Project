@@ -25,4 +25,15 @@ class ApplicationController < Sinatra::Base
     post.to_json
   end
 
+  # update operation 
+  patch '/posts/:id' do
+    post = Post.find(params[:id])
+    post.update(
+      title: params[:title],
+      image: params[:image],
+      short_story: params[:short_story]
+    )
+    post.to_json
+  end
+
 end
