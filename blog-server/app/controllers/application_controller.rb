@@ -9,7 +9,7 @@ class ApplicationController < Sinatra::Base
   # Read Operation
   get '/posts' do
     posts = Post.all
-    posts.to_json
+    posts.to_json(include: :likes)
   end
 
   # Create operation 

@@ -1,5 +1,11 @@
 source "https://rubygems.org"
 
+# generate seed data to to our database 
+# https://github.com/faker-ruby/faker#default
+# Used to generate seed data
+# https://github.com/faker-ruby/faker
+gem "faker", "~> 2.18"
+
 # A DSL for quickly creating web applications
 # https://github.com/sinatra/sinatra
 gem "sinatra", "~> 2.1"
@@ -50,3 +56,4 @@ group :test do
   gem "rspec", "~> 3.10"
   gem "rspec-json_expectations", "~> 2.2"
 end
+
