@@ -21,6 +21,8 @@ const Post = ({ posts, loadPosts }) => {
   const [state, setState] = useState(initialState);
   const [userId, setUserId] = useState(null);
   const [editMode, setEditMode] = useState(false);
+  const [searchInput, setSearchInput] = useState("");
+  const [filteredResults, setFilteredResults] = useState([]);
 
   // object destructuring
   const { title, image, short_story } = state;
@@ -60,6 +62,7 @@ const Post = ({ posts, loadPosts }) => {
         loadPosts();
         setUserId(null);
         setEditMode(false);
+        
       }
     }
   }
@@ -70,6 +73,8 @@ const Post = ({ posts, loadPosts }) => {
     setUserId(id);
     setEditMode(true);
     handleShow();
+    // rerender the loadPosts function
+    loadPosts();
   };
 
   // handle the delete operation
@@ -81,32 +86,100 @@ const Post = ({ posts, loadPosts }) => {
       loadPosts();
     }
   };
+
+  // search filter
+  const searchItems = (searchValue) => {
+    setSearchInput(searchValue);
+    if (searchInput !== "") {
+      const filteredData = posts.filter((item) => {
+        return Object.values(item)
+          .join("")
+          .toLowerCase()
+          .includes(searchInput.toLowerCase());
+      });
+      setFilteredResults(filteredData);
+    } else {
+      setFilteredResults(posts);
+    }
+  };
   return (
     <>
-      <Button variant="secondary" onClick={handleShow}>
-        Create New Post
-      </Button>
+      <div className="row d-flex align-items-center">
+        <div className="col-md-8">
+          <Button variant="secondary" onClick={handleShow}>
+            Create New Post
+          </Button>
+        </div>
+        <div className="col-md-4">
+          <form action="">
+            <div className="blog__search">
+              <input
+                type="search"
+                className="header-search-input"
+                placeholder="Search post"
+                onChange={(e) => searchItems(e.target.value)}
+              />
+            </div>
+          </form>
+        </div>
+      </div>
 
       <div className="row">
-        {posts.map(({ title, image, short_story, id }) => (
-          <div className="col-md-4" key={id}>
-            <div className="post__wrapper">
-              <h3 className="p-2 text-center">{title}</h3>
-              <div className="post__image">
-                <img src={image} alt={title}></img>
-              </div>
-              <p className="story__desc">{short_story}</p>
-              <div className="action__icons">
-                <div className="post__edit" onClick={() => handleUpdate(id)}>
-                  <BsFillPencilFill />
+        {searchInput.length > 1
+          ? filteredResults.map(({ title, image, short_story, id }) => {
+              return (
+                <div className="col-md-4" key={id}>
+                  <div className="post__wrapper">
+                    <h3 className="p-2 text-center">{title}</h3>
+                    <div className="post__image">
+                      <img src={image} alt={title}></img>
+                    </div>
+                    <p className="story__desc">{short_story}</p>
+                    <div className="action__icons">
+                      <div
+                        className="post__edit"
+                        onClick={() => handleUpdate(id)}
+                      >
+                        <BsFillPencilFill />
+                      </div>
+                      <div
+                        className="post__delete"
+                        onClick={() => handleDelete(id)}
+                      >
+                        <BsFillTrashFill />
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div className="post__delete" onClick={() => handleDelete(id)}>
-                  <BsFillTrashFill />
+              );
+            })
+          : posts.map(({ title, image, short_story, id }) => {
+              return (
+                <div className="col-md-4" key={id}>
+                  <div className="post__wrapper">
+                    <h3 className="p-2 text-center">{title}</h3>
+                    <div className="post__image">
+                      <img src={image} alt={title}></img>
+                    </div>
+                    <p className="story__desc">{short_story}</p>
+                    <div className="action__icons">
+                      <div
+                        className="post__edit"
+                        onClick={() => handleUpdate(id)}
+                      >
+                        <BsFillPencilFill />
+                      </div>
+                      <div
+                        className="post__delete"
+                        onClick={() => handleDelete(id)}
+                      >
+                        <BsFillTrashFill />
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        ))}
+              );
+            })}
       </div>
 
       {/* toast action message notification */}
