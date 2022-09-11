@@ -3,9 +3,9 @@ puts "🌱 Seeding spices..."
 # Seed your database here
 30.times do
     Post.create(
-        title: Faker::Game.unique.title,
-        image: Faker::Avatar.unique.image,
-        short_story: Faker::Lorem.unique.paragraph(sentence_count: 70)
+        title: Faker::Movie.unique.title,
+        image: "https://loremflickr.com/#{rand(150..200)}/#{rand(150..200)}/all",
+        short_story: Faker::Lorem.unique.paragraph(sentence_count: 20)
     )
 end
 
