@@ -15,7 +15,7 @@ Building a Sinatra API backend that uses Active Record to access and persist dat
 
 - [x] Clone the repository using `https://github.com/Douglas254/Phase3-Final-Project.git` or download and extract the zip file.
 - [x] Open up the cloned folder in your preferred text editor. Open up a terminal within your workspace and navigate into the Phase3-Final-Project folder
-- [x] Within that folder `blog-client`, run `npm install` which will install all dependencies for the project and get our application running on `http://localhost:3000/`
+- [x] Within that folder `blog-client`, run `npm install` which will install all dependencies for the project and then run `npm start` to get our application running on `http://localhost:3000/`
 
 ## Backend Setup ✴️
 - [x] cd into blog-client folder and run `bundle install` from your terminal which will install all the gems 
@@ -24,7 +24,7 @@ Building a Sinatra API backend that uses Active Record to access and persist dat
 
 ## Endpoints API 🛠️
 
-✅ Your base URL API for storing posts in SQlite: `http://localhost:9292/posts`
+✅ Your base URL API for storing posts in SQLite: `http://localhost:9292/posts`
 
 ## Core Deliverables 📈
 
